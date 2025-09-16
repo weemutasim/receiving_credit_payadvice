@@ -12,10 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Receiving Credit & Pay Advance',
-      /* theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ), */
+      debugShowCheckedModeBanner: false,
       home: Home()
     );
   }

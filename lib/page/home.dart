@@ -9,6 +9,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
 
     return DefaultTabController(
       length: 2,
@@ -23,20 +24,23 @@ class Home extends StatelessWidget {
             labelColor: Colors.white,
             labelStyle: TextStyle(
               fontFamily: AppFonts.traJanPro,
-              fontSize: 20,
+              fontSize: width * .01,
             ),
             tabs: const [
               Tab(text: 'Credit'),
               Tab(text: 'Pay Advance'),
             ],
           ),
-          title: Text(
-            'Receiving Credit & Pay Advance', 
-            style: TextStyle(
-              fontFamily: AppFonts.traJanProBold,
-              fontSize: 25,
-              color: Colors.white
-            )
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Receiving Credit & Pay Advance', 
+                style: TextStyle(fontFamily: AppFonts.traJanPro, fontSize: width * .013, color: Colors.white)
+              ),
+              Text('V0.0.4', 
+                style: TextStyle(fontFamily: AppFonts.traJanPro, fontSize: width * .008, color: Colors.white)
+              ),
+            ],
           ),
         ),
         body: const TabBarView(

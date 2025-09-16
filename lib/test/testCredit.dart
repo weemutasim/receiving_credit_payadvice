@@ -45,3 +45,17 @@ Row(
             })
           )
  */
+//check box all
+/* Checkbox(
+    value: item.activeflag == 'Y',
+    activeColor: AppColors.darkPink,
+    onChanged: (bool? value) async {
+      final newFlag = value == true ? 'Y' : 'N';
+      setState(() {
+        item.activeflag = newFlag;
+      });
+      await Dbconnect().upActiveFlag(id: item.id!, flag: newFlag);
+      await _dBCredit();
+    },
+  ),
+), */
