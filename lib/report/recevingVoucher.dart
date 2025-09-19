@@ -48,7 +48,7 @@ class Recevingvoucher {
   }
 
   headerReport(pw.Context context, String titleThai, String titleEng, pw.MemoryImage logoblack, pw.Font pgVim, pw.Font traJanPro) {
-    List<String> listDateNo = dateformat(date: DateTime.now(), type: 'dmy').split('');
+    List<String> listDateNo = dateformat(date: DateTime.parse(cashAdvance!.trdate!), type: 'dmy').split('');
     List<String> listDate = ['D', 'D', 'M', 'M', 'Y', 'Y'];
 
     pw.Widget dateNo(double width, double height, String title, pw.Font pgVim, { int chk = 0}) {
